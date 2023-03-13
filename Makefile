@@ -14,19 +14,14 @@ apply-infra:
 # openshift
 #
 namespace-openshift:
-	oc new-project aws-load-balancer-operator
+	oc new-project 3scale-demo
 
 secret-openshift:
-	kube/create-secret.sh
+	openshift/create-secret.sh
 
 operator-openshift:
-	oc apply -f kube/operator.yaml
+	oc apply -f openshift/operator.yaml
 
 controller-openshift:
-	oc apply -f kube/controller.yaml
+	oc apply -f openshift/controller.yaml
 
-routers-openshift:
-	oc apply -f kube/routers.yaml	
-
-demo-openshift:
-	oc apply -f kube/demo.yaml	

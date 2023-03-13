@@ -1,0 +1,12 @@
+apiVersion: apps.3scale.net/v1alpha1
+kind: APIManager
+metadata:
+  name: 3scale
+  namespace: 3scale-demo
+spec:
+  wildcardDomain: "apps.lp9nleyq.eastus.aroapp.io"
+  system:
+    fileStorage:
+      simpleStorageService:
+        configurationSecretRef:
+          name: aws-auth
