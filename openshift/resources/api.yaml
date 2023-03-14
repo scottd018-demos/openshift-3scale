@@ -11,7 +11,7 @@ spec:
   systemName: "demo-backend"
   mappingRules:
     - httpMethod: GET
-      pattern: "/v1"
+      pattern: "/v0"
       increment: 1
       metricMethodRef: hits  
 ---
