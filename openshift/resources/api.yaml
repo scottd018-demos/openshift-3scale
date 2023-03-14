@@ -11,7 +11,7 @@ spec:
   systemName: "demo-backend"
   mappingRules:
     - httpMethod: GET
-      pattern: "/"
+      pattern: "/v1"
       increment: 1
       metricMethodRef: hits  
 ---
@@ -32,3 +32,18 @@ spec:
       name: "demo"
       published: true
       appsRequireApproval: false
+  # deployment:
+  #   apicastSelfManaged:
+  #     stagingPublicBaseURL: "https://api-3scale-apicast-staging.apps.lp9nleyq.eastus.aroapp.io"
+  #     productionPublicBaseURL: "https://api-3scale-apicast-production.apps.lp9nleyq.eastus.aroapp.io"
+  #     authentication:
+  #       oidc:
+  #         issuerEndpoint: "https://keycloak-user2.apps.lp9nleyq.eastus.aroapp.io/auth/realms/microservices-demo/account/"
+  #         issuerType: "keycloak"
+  #         authenticationFlow:
+  #           standardFlowEnabled: false
+  #           implicitFlowEnabled: false
+  #           serviceAccountsEnabled: true
+  #           directAccessGrantsEnabled: false
+  #         jwtClaimWithClientID: "azp"
+  #         jwtClaimWithClientIDType: "plain" 
